@@ -159,13 +159,61 @@ function Abacus(parentDivId, type) {
       
       var dn = new UIElement(nodePosX, nodePosY+2, abacusCtrl.beadWidth, abacusCtrl.beadHeight-4, 0, nodeId, 0, 0);
 
-      ctx.fillStyle = "rgba(60, 60, 60, 0.3)";
+      ctx.fillStyle = "rgba(60, 60, 60, 0.3)";	  
       drawRoundRectFilled(ctx, dn.x+4, dn.y+4, dn.x2-dn.x, dn.y2-dn.y, 15);
-      ctx.fillStyle = beadColor;
+	  
+	  var beadColor2;  
+	  
+	  if(nodeId < 5){
+		  beadColor2 = "rgba(123, 111, 131, 1.0)"; // stone
+	  }
+	  
+	  else if(nodeId < 10){
+		  beadColor2 = "rgba(240, 173, 0, 1.0)"; // grain
+	  }
+	  
+	  else if(nodeId < 15){
+		  beadColor2 = "rgba(79, 166, 235, 1.0)"; // sheep
+	  }
+	  
+	  else if(nodeId < 20){
+		  beadColor2 = "rgba(156, 67, 0, 1.0)"; // brick
+	  }
+	  
+	  else {
+		  beadColor2 = "rgba(81, 125, 25, 1.0)"; // wood
+	  }
+	  
+      ctx.fillStyle = beadColor2;
      
       if(nodeId === hooveredBead) {
-        ctx.fillStyle=hooveredBeadColor;
-      } 
+		  
+		  var hooveredBeadColor2;  
+	  
+		  if(nodeId < 5){
+			  hooveredBeadColor2 = "rgba(123, 111, 131, 0.8)"; // stone
+		  }
+		  
+		  else if(nodeId < 10){
+			  hooveredBeadColor2 = "rgba(240, 173, 0, 0.8)"; // grain
+		  }
+		  
+		  else if(nodeId < 15){
+			  hooveredBeadColor2 = "rgba(79, 166, 235, 0.8)"; // sheep
+		  }
+		  
+		  else if(nodeId < 20){
+			  hooveredBeadColor2 = "rgba(156, 67, 0, 0.8)"; // brick
+		  }
+		  
+		  else {
+			  hooveredBeadColor2 = "rgba(81, 125, 25, 0.8)"; // wood
+		  }
+		
+		//ctx.fillStyle=hooveredBeadColor;
+		ctx.fillStyle=hooveredBeadColor2;
+      }
+	  
       drawRoundRectFilled(ctx, dn.x, dn.y, dn.x2-dn.x, dn.y2-dn.y, 15);
       ctx.fillStyle = "rgba(255, 255, 255, 1.0)";
       
