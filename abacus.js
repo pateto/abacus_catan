@@ -150,6 +150,10 @@ function Abacus(parentDivId, type) {
     
     this.update();
   };
+  
+  function getColor(r, g, b, a){
+	  return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+  }
 
   function drawBead(nodeId, ctx) {
 
@@ -164,24 +168,24 @@ function Abacus(parentDivId, type) {
 	  
 	  var beadColor2;  
 	  
-	  if(nodeId < 5){
-		  beadColor2 = "rgba(123, 111, 131, 1.0)"; // stone
+	  if(nodeId < 5){		  
+		  beadColor2 = getColor(123, 111, 131, 1.0); // stone
 	  }
 	  
 	  else if(nodeId < 10){
-		  beadColor2 = "rgba(240, 173, 0, 1.0)"; // grain
+		  beadColor2 = getColor(240, 173, 0, 1.0); // grain
 	  }
 	  
 	  else if(nodeId < 15){
-		  beadColor2 = "rgba(79, 166, 235, 1.0)"; // sheep
+		  beadColor2 = getColor(135, 165, 56, 1.0); // sheep
 	  }
 	  
 	  else if(nodeId < 20){
-		  beadColor2 = "rgba(156, 67, 0, 1.0)"; // brick
+		  beadColor2 = getColor(156, 67, 0, 1.0); // brick
 	  }
 	  
 	  else {
-		  beadColor2 = "rgba(81, 125, 25, 1.0)"; // wood
+		  beadColor2 = getColor(81, 125, 25, 1.0); // wood
 	  }
 	  
       ctx.fillStyle = beadColor2;
@@ -191,23 +195,23 @@ function Abacus(parentDivId, type) {
 		  var hooveredBeadColor2;  
 	  
 		  if(nodeId < 5){
-			  hooveredBeadColor2 = "rgba(123, 111, 131, 0.8)"; // stone
+			  hooveredBeadColor2 = getColor(123 + 25, 111 + 25, 131 + 25, 1.0); // stone
 		  }
 		  
 		  else if(nodeId < 10){
-			  hooveredBeadColor2 = "rgba(240, 173, 0, 0.8)"; // grain
+			  hooveredBeadColor2 = getColor(240 + 25, 173 + 25, 0 + 25, 1.0); // grain
 		  }
 		  
 		  else if(nodeId < 15){
-			  hooveredBeadColor2 = "rgba(79, 166, 235, 0.8)"; // sheep
+			  hooveredBeadColor2 = getColor(135 + 25, 165 + 25, 56 + 25, 1.0); // sheep
 		  }
 		  
 		  else if(nodeId < 20){
-			  hooveredBeadColor2 = "rgba(156, 67, 0, 0.8)"; // brick
+			  hooveredBeadColor2 = getColor(156 + 25, 67 + 25, 0 + 25, 1.0); // brick
 		  }
 		  
 		  else {
-			  hooveredBeadColor2 = "rgba(81, 125, 25, 0.8)"; // wood
+			  hooveredBeadColor2 = getColor(81 + 25, 125 + 25, 25 + 25, 1.0); // wood
 		  }
 		
 		//ctx.fillStyle=hooveredBeadColor;
