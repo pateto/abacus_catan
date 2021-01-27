@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Abacus for Catan!</title>
+    <script src='./abacus.js'></script>
+    <script language="JavaScript" type="text/javascript">
+      function run() {
+        var abacus = new Abacus("myAbacus", 0);
+        abacus.init();
+        
+        var abacus2 = new Abacus("myAbacus2", 0);
+        abacus2.init();
+        
+      }
+    </script>
+  </head>
+  <body onload="run();">
+				
+	<div id="myAbacus" style="display: inline-block;"> </div>
+	
+	<div id="space" style="display: inline-block;"> ___________________ </div>
+	
+	<div id="myAbacus2" style="display: inline-block;"> </div>
+   
+  </body>
+</html>

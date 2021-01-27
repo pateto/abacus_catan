@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Abacus for Catan!</title>
+    <script src='./abacus.js'></script>
+    <script language="JavaScript" type="text/javascript">
+      function run() {
+        var abacus = new Abacus("myAbacus", 0);
+        abacus.init();
+        
+        var abacus2 = new Abacus("myAbacus2", 1);
+        abacus2.init();
+        
+      }
+    </script>
+  </head>
+  <body onload="run();">
+    <h1>Japanese Abacus Simulator (Soroban)</h1>
+    <div id="myAbacus"> </div>
+
+    <h1>Chinese Abacus Simulator (Suanpan)</h1>
+
+    <div id="myAbacus2"> </div>
+   
+  </body>
+</html>
